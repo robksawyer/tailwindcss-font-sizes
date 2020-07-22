@@ -52,26 +52,19 @@ module.exports = plugin.withOptions(
     //    startingSize: 8,
     //    baseSize: 14
     // }
-    console.log('options', options)
     const fontSizes = getFontSizes(
       (options && options.total) || 250,
       (options && options.baseSize) || fontBaseSize,
       (options && options.startingSize) || 8
     )
-    // console.log('fontSizes', fontSizes)
     return {
       theme: {
-        // Doesn't work
         // fontSizes: {
         extend: {
-          // Doesn't work
-          // fontSizes: {
           fontSize: {
             ...fontSizes,
           },
-          // },
         },
-        // },
       },
       // variants: {
       //   fontSizes: [],
