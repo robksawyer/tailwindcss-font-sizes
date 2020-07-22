@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-font-sizes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tailwind CSS plugin that generates font sizes in ems.",
   "author": "Rob Sawyer <robksawyer@gmail.com>",
   "license": "ISC",
