@@ -1,6 +1,6 @@
 /**
  * TailwindCSS Font Sizes
- * Generates font sizes in rems
+ * Generates font sizes in ems
  * @file index.js
  */
 const plugin = require('tailwindcss/plugin')
@@ -54,17 +54,18 @@ module.exports = plugin.withOptions(
     // }
     console.log('options', options)
     const fontSizes = getFontSizes(
-      options.total || 250,
-      options.baseSize || fontBaseSize,
-      options.startingSize || 8
+      (options && options.total) || 250,
+      (options && options.baseSize) || fontBaseSize,
+      (options && options.startingSize) || 8
     )
+    // console.log('fontSizes', fontSizes)
     return {
       theme: {
         // Doesn't work
-        // remFontSizes: {
+        // fontSizes: {
         extend: {
           // Doesn't work
-          // remFontSizes: {
+          // fontSizes: {
           fontSize: {
             ...fontSizes,
           },
@@ -72,9 +73,9 @@ module.exports = plugin.withOptions(
         },
         // },
       },
-      variants: {
-        remFontSizes: [],
-      },
+      // variants: {
+      //   fontSizes: [],
+      // },
     }
   }
 )

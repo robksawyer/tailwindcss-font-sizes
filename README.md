@@ -1,5 +1,5 @@
 # Font Sizes for Tailwind CSS
-This plugin allows you to quickly generate font sizes in rems.
+This plugin allows you to quickly generate font sizes in ems.
 
 ## Requirements
 
@@ -22,8 +22,12 @@ Pass along a number value to generate that many font sizes.
 // tailwind.config.js
 module.exports = {
   plugins: [
-    // Generates 100 sizes
-    require('tailwindcss-font-sizes')(100),
+    // Generates 250 font sizes in ems
+    require('tailwindcss-font-sizes')({
+        total: 10, // default
+        // startingSize: 8, // default
+        // baseSize: 14, // default
+    }),
   ],
 };
 ```
@@ -31,78 +35,48 @@ module.exports = {
 The above configuration would generate the following CSS:
 
 ```css
-@media (min-width: only screen and (-webkit-device-pixel-ratio: 1) and (min-width: 320px) and (max-width: 568px)) {
-  .psm\:block {
-    display: block
-  }
+.text-0 {
+  font-size: 0em
+}
 
-  .psm\:inline-block {
-    display: inline-block
-  }
+.text-1 {
+  font-size: 0.07142857142857142em
+}
 
-  .psm\:inline {
-    display: inline
-  }
+.text-2 {
+  font-size: 0.14285714285714285em
+}
 
-  .psm\:flex {
-    display: flex
-  }
+.text-3 {
+  font-size: 0.21428571428571427em
+}
 
-  .psm\:inline-flex {
-    display: inline-flex
-  }
+.text-4 {
+  font-size: 0.2857142857142857em
+}
 
-  .psm\:table {
-    display: table
-  }
+.text-5 {
+  font-size: 0.35714285714285715em
+}
 
-  .psm\:table-caption {
-    display: table-caption
-  }
+.text-6 {
+  font-size: 0.42857142857142855em
+}
 
-  .psm\:table-cell {
-    display: table-cell
-  }
+.text-7 {
+  font-size: 0.5em
+}
 
-  .psm\:table-column {
-    display: table-column
-  }
+.text-8 {
+  font-size: 0.5714285714285714em
+}
 
-  .psm\:table-column-group {
-    display: table-column-group
-  }
+.text-9 {
+  font-size: 0.6428571428571429em
+}
 
-  .psm\:table-footer-group {
-    display: table-footer-group
-  }
-
-  .psm\:table-header-group {
-    display: table-header-group
-  }
-
-  .psm\:table-row-group {
-    display: table-row-group
-  }
-
-  .psm\:table-row {
-    display: table-row
-  }
-
-  .psm\:flow-root {
-    display: flow-root
-  }
-
-  .psm\:grid {
-    display: grid
-  }
-
-  .psm\:inline-grid {
-    display: inline-grid
-  }
-
-  .psm\:hidden {
-    display: none
-  }
+.text-10 {
+  font-size: 0.7142857142857143em
 }
 /* etc. */
 ```
@@ -110,8 +84,8 @@ The above configuration would generate the following CSS:
 Which you can then use in your HTML like this:
 
 ```html
-<div class="psm:hidden lg:block">
-  <p>I'm hidden on small phones.</p>
+<div class="text-10">
+  <p>I'm displayed at a font size of 0.7142857142857143 ems</p>
 </div>
 ```
 
