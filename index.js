@@ -14,7 +14,7 @@ let fontBaseSize = 14
  * @param {int} val is the value to be calculated
  * @param {int} baseSize is base size to base the calculations from
  */
-const convertPxToEms = (val, baseSize = 14) => `${val / baseSize}em`
+const convertPxToEms = (val, baseSize = 14) => `${val / baseSize}em;`
 
 /**
  * @param {int} totalSizes is the total number of fonts to generate

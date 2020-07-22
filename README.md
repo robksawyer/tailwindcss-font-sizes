@@ -13,7 +13,7 @@ yarn add tailwindcss-font-sizes
 
 ## Usage
 
-The following plugin options are available. See below how these are passed (via an array) to the plugin in your `tailwind.config.js`.
+The following plugin options are available. See below how these are passed (via an object) to the plugin in your `tailwind.config.js`.
 
 ## Options Available
 Pass along a number value to generate that many font sizes.
@@ -36,47 +36,47 @@ The above configuration would generate the following CSS:
 
 ```css
 .text-0 {
-  font-size: 0em
+  font-size: 0em;
 }
 
 .text-1 {
-  font-size: 0.07142857142857142em
+  font-size: 0.07142857142857142em;
 }
 
 .text-2 {
-  font-size: 0.14285714285714285em
+  font-size: 0.14285714285714285em;
 }
 
 .text-3 {
-  font-size: 0.21428571428571427em
+  font-size: 0.21428571428571427em;
 }
 
 .text-4 {
-  font-size: 0.2857142857142857em
+  font-size: 0.2857142857142857em;
 }
 
 .text-5 {
-  font-size: 0.35714285714285715em
+  font-size: 0.35714285714285715em;
 }
 
 .text-6 {
-  font-size: 0.42857142857142855em
+  font-size: 0.42857142857142855em;
 }
 
 .text-7 {
-  font-size: 0.5em
+  font-size: 0.5em;
 }
 
 .text-8 {
-  font-size: 0.5714285714285714em
+  font-size: 0.5714285714285714em;
 }
 
 .text-9 {
-  font-size: 0.6428571428571429em
+  font-size: 0.6428571428571429em;
 }
 
 .text-10 {
-  font-size: 0.7142857142857143em
+  font-size: 0.7142857142857143em;
 }
 /* etc. */
 ```
