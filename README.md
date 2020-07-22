@@ -25,6 +25,7 @@ module.exports = {
     // Generates 250 font sizes in ems
     require('tailwindcss-font-sizes')({
         total: 10, // default
+        format: 'em', // default em (options include: em, rem, px)
         // startingSize: 8, // default
         // baseSize: 14, // default
     }),

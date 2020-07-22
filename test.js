@@ -1072,6 +1072,34 @@ test('A single font size can be added', () => {
   })
 })
 
+test('Format can be changed to rems ', () => {
+  return generatePluginCss({}, { total: 1, format: 'rem' }).then((css) => {
+    expect(css).toMatchCss(`
+      .text-0 {
+        font-size: 0rem;
+      }
+
+      .text-1 {
+        font-size: 0.07142857142857142rem;
+      }
+    `)
+  })
+})
+
+test('Format can be changed to pixels ', () => {
+  return generatePluginCss({}, { total: 1, format: 'px' }).then((css) => {
+    expect(css).toMatchCss(`
+      .text-0 {
+        font-size: 0px;
+      }
+
+      .text-1 {
+        font-size: 1px;
+      }
+    `)
+  })
+})
+
 test('Multiple font sizes can be added', () => {
   return generatePluginCss({}, { total: 10 }).then((css) => {
     expect(css).toMatchCss(`
@@ -1117,6 +1145,56 @@ test('Multiple font sizes can be added', () => {
 
       .text-10 {
         font-size: 0.7142857142857143em;
+      }
+    `)
+  })
+})
+
+test('Multiple font sizes can be added in rems', () => {
+  return generatePluginCss({}, { total: 10, format: 'rem' }).then((css) => {
+    expect(css).toMatchCss(`
+      .text-0 {
+        font-size: 0rem;
+      }
+
+      .text-1 {
+        font-size: 0.07142857142857142rem;
+      }
+
+      .text-2 {
+        font-size: 0.14285714285714285rem;
+      }
+
+      .text-3 {
+        font-size: 0.21428571428571427rem;
+      }
+
+      .text-4 {
+        font-size: 0.2857142857142857rem;
+      }
+
+      .text-5 {
+        font-size: 0.3571428571428571rem;
+      }
+
+      .text-6 {
+        font-size: 0.42857142857142855rem;
+      }
+
+      .text-7 {
+        font-size: 0.5rem;
+      }
+
+      .text-8 {
+        font-size: 0.5714285714285714rem;
+      }
+
+      .text-9 {
+        font-size: 0.6428571428571428rem;
+      }
+
+      .text-10 {
+        font-size: 0.7142857142857142rem;
       }
     `)
   })
